@@ -1,3 +1,8 @@
+#!/bin/bash
+set -e
+set -u
+set -o pipefail
+
 echo $RNA_ALIGN_DIR
 mkdir -p $RNA_ALIGN_DIR
 cd $RNA_ALIGN_DIR

@@ -1,3 +1,8 @@
+#!/bin/bash
+set -e
+set -u
+set -o pipefail
+
 echo $RNA_DATA_TRIM_DIR
 mkdir -p $RNA_DATA_TRIM_DIR
 
