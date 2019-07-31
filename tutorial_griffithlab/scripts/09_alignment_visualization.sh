@@ -3,13 +3,13 @@ set -e
 set -u
 set -o pipefail
 
-#echo $RNA_ALIGN_DIR
+echo $RNA_ALIGN_DIR
 cd $RNA_ALIGN_DIR
-#find *.bam -exec echo samtools index {} \; | sh
+find *.bam -exec echo samtools index {} \; | sh
 
 # BAM Read Counting
 cd $RNA_HOME
-mkdir bam_readcount
+mkdir -p bam_readcount
 cd bam_readcount
 
 # Create faidx indexed reference sequence file for use with mpileup
