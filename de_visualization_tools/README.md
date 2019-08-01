@@ -2,9 +2,9 @@
 
 ## Tools installed inside R:
 
-1) (Failing)[PIVOT](https://github.com/qinzhu/PIVOT)
+1) [PIVOT](https://github.com/qinzhu/PIVOT)
     * Command line dependencies: <br>
-        ```sudo apt-get install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev libcurl4-gnutls-dev libcurl4-openssl-dev libcairo2-dev```
+        ```sudo apt-get install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev libcurl4-gnutls-dev libcurl4-openssl-dev libcairo2-dev libxt-dev```
     * R packages: <br>
     ```
     # dependecies that needs to be manually installed 
@@ -15,18 +15,18 @@
     install.packages("devtools") 
 
     library("devtools")
-    source("http://bioconductor.org/biocLite.R")  
-    biocLite("GO.db")
-    biocLite("HSMMSingleCell")
-    biocLite("org.Mm.eg.db")
-    biocLite("org.Hs.eg.db")
-    biocLite("DESeq2")
-    biocLite("SingleCellExperiment")
-    biocLite("scater")
+     
+    BiocManager::install("GO.db")
+    BiocManager::install("HSMMSingleCell")
+    BiocManager::install("org.Mm.eg.db")
+    BiocManager::install("org.Hs.eg.db")
+    BiocManager::install("DESeq2")
+    BiocManager::install("SingleCellExperiment")
+    BiocManager::install("scater")
+    BiocManager::install("BiocGenerics") # You need the latest BiocGenerics >=0.23.3
 
     # Install PIVOT
-    install_github("qinzhu/PIVOT")
-    biocLite("BiocGenerics") # You need the latest BiocGenerics >=0.23.3
+    devtools::install_github("qinzhu/PIVOT")
     ```
 
 2) [Glimma](https://github.com/Shians/Glimma)
